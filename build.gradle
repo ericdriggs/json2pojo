@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.intellij' version '0.4.1'
+    id 'org.jetbrains.intellij' version '0.5.0'
     id 'java'
     id 'idea'
 }
@@ -14,14 +14,14 @@ repositories {
 dependencies {
     compile files("libs/lombok.jar")
     compile "com.sun.codemodel:codemodel:2.6"
-    compileOnly "org.projectlombok:lombok:1.18.4"
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
 }
 
 intellij {
-    version '2018.3'
+    version '2020.2.3'
 }
 
 patchPluginXml {
     sinceBuild '162.00'
-    untilBuild '201.00'
 }
